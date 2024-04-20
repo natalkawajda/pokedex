@@ -21,6 +21,25 @@ div.card {
   grid-gap: 20px; 
 }
 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .pokemon-list {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .pokemon-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .poke {
   border: solid black;
   border-radius: 10px;
@@ -38,11 +57,7 @@ h2 {
 a {
   text-decoration: none;
 }
-.card {
-  display: flex;
-  justify-content: space-between;
 
-}
 .buttons {
   display: flex;
   justify-content: center;
@@ -65,11 +80,18 @@ button {
 img#bigfoto {
   height: 13rem;
 }
-#maininfo {
-display: flex;
-justify-content: space-around;
-
+#maininfo, .card {
+  display: flex;
+  justify-content: space-around;
 }
+
+@media (max-width: 768px) {
+  #maininfo, .card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 #abilities {
   margin-bottom: 2rem;
 }
@@ -85,6 +107,14 @@ justify-content: space-around;
   right: 0;              
   top: 0;                   
   margin: 2rem;
+}
+@media (max-width: 768px) {
+  #navbar {
+    position: relative;
+    margin: 1rem 0.5rem;
+    right: 0;
+    top: 0;
+  }
 }
 #about {
   margin-left: 1rem;
