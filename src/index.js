@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import { Home, PokeInfo } from "./App";
+import About from './About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createHashRouter([
@@ -16,6 +17,10 @@ const router = createHashRouter([
   {
     path: "/:pokemonName",
     element: <PokeInfo />,
+  },
+  {
+    path: "/About",
+    element: <About />,
   },
 ]);
 root.render(

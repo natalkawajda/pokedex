@@ -2,16 +2,31 @@ import logo from './pokemon.png';
 import './App.css';
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import About from './About';
+import NavigationBar from './NavigationBar';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <Link to="/" element={<Home />}></Link>
+//         <Link to="/:pokemonName" element={<PokeInfo />}></Link>
+//       </header>
+//     </div>
+//   );
+// }
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Link to="/" element={<Home />}></Link>
-        <Link to="/:pokemonName" element={<PokeInfo />}></Link>
-      </header>
-    </div>
+    <Router>
+      <NavigationBar />  
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/:pokemonName" element={<PokeInfo />} />
+      </Routes>
+    </Router>
   );
 }
 export function Home(){
@@ -55,6 +70,7 @@ export function Home(){
     fetchData(url,previousUrl);
   }
   return (
+    <div><NavigationBar />
     <div className='pokemon-container'>
       <div id= 'logo'>
       <img  src={logo} alt='pokemon'/></div>
@@ -76,7 +92,7 @@ export function Home(){
       <button onClick={handleNextClick}>Next page</button>
       )
     }
-    </div></div>
+    </div></div></div>
   )
 }
 function Card({ pokemonURL }){
@@ -198,7 +214,7 @@ export function PokeInfo(){
   }
   }
   return (
-    
+    <div><NavigationBar />
     <div className='info'>
        {pokemon ? (
         <div>
@@ -257,7 +273,7 @@ export function PokeInfo(){
         ) : (
           <p>Loading...</p>
         )}
-        </div>
+        </div></div>
       )
 }
 
