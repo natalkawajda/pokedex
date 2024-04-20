@@ -1,38 +1,82 @@
 .App {
   text-align: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f4cc07;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#page {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+
+}
+div.card {
+
+  display: flex ;
+  margin: 10px;
+}
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates four columns of equal width */
+  grid-gap: 20px; /* This replaces the margin used in Flexbox for spacing between items */
+}
+
+.poke {
+  border: solid black;
+  border-radius: 10px;
+  padding: 1px;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's width */
+  
+}
+
+
+h2 {
+  text-align: center;
+  color: black;
+  text-decoration: none !important;
+}
+a {
+  text-decoration: none;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+
+}
+.buttons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+button {
+  font-family: 'MyFont';
 }
+#logo {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.info {
+  margin: 10px;
+}
+img#bigfoto {
+  height: 13rem;
+}
+#maininfo {
+display: flex;
+justify-content: space-around;
+
+}
+#abilities {
+  margin-bottom: 2rem;
+}
+.stats-table {
+
+
+}
+#infotext {
+  
 }
