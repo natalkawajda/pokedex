@@ -1,22 +1,21 @@
 // src/components/About.js
-
+import './App.css';
 import React from 'react';
 import NavigationBar from './NavigationBar';
-import { Link } from 'react-router-dom';
+
 
 const About = () => {
   return (
     <div>
           <div>
       <header>
-    <nav>
-      <Link to="/">Home</Link> | <Link to="/about">About</Link>
-    </nav>
+      <div><NavigationBar /></div>
     </header>
-      <h1>About the Pokedex</h1>
-      <p>This is a Pokedex application built with React and React Router.</p>
-      <p> Pokemons are cool. </p>
-    </div></div>
+    <div id='about'>
+      <h1>About the Pokédex</h1>
+      <p>This is a Pokédex application built with React and React Router. Our group consists of 3 people: Ada, Marcin and Natalia.</p>
+      <p> Pokémons are cool. </p>
+    </div></div></div>
   );
 };
 

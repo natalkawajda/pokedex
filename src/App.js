@@ -2,21 +2,11 @@ import logo from './pokemon.png';
 import './App.css';
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import { Link } from "react-router-dom";
 import About from './About';
 import NavigationBar from './NavigationBar';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <Link to="/" element={<Home />}></Link>
-//         <Link to="/:pokemonName" element={<PokeInfo />}></Link>
-//       </header>
-//     </div>
-//   );
-// }
+
 function App() {
   return (
     <Router>
@@ -70,10 +60,12 @@ export function Home(){
     fetchData(url,previousUrl);
   }
   return (
-    <div><NavigationBar />
-    <div className='pokemon-container'>
-      <div id= 'logo'>
+    <div>
+    <div><NavigationBar /></div>
+    <div id= 'logo'>
       <img  src={logo} alt='pokemon'/></div>
+    <div className='pokemon-container'>
+      
       <div className='pokemon-list'>
         {pokemonList.map((e, index) => (
           <Card

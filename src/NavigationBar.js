@@ -6,7 +6,9 @@ const NavigationBar = () => {
   return (
     // <header>
     <nav>
-      <Link to="/">Home</Link> | <Link to="/about">About</Link>
+      <div id='navbar'>
+      <Link className= 'link' to="/">Home</Link> | <Link className='link' to="/about">About</Link>
+      </div>
     </nav>
     // </header>
   );

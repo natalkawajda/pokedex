@@ -1,3 +1,5 @@
+#INFO
+In this assignemt we created a Pokédex in React. The application is deployed and can be accessed at https://natalkawajda.github.io/pokedex
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

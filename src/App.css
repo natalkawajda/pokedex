@@ -17,15 +17,15 @@ div.card {
 }
 .pokemon-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Creates four columns of equal width */
-  grid-gap: 20px; /* This replaces the margin used in Flexbox for spacing between items */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 20px; 
 }
 
 .poke {
   border: solid black;
   border-radius: 10px;
   padding: 1px;
-  box-sizing: border-box; /* Ensure padding and border are included in the element's width */
+  box-sizing: border-box; 
   
 }
 
@@ -53,14 +53,14 @@ button {
   font-family: 'MyFont';
 }
 #logo {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-
+  width: 100%;            
 }
 .info {
   margin: 10px;
+  margin-top: 3rem;
 }
 img#bigfoto {
   height: 13rem;
@@ -73,10 +73,20 @@ justify-content: space-around;
 #abilities {
   margin-bottom: 2rem;
 }
-.stats-table {
-
-
-}
-#infotext {
+.link {
+  color: black;
   
+}
+.link:hover{
+  color: #204272;
+}
+#navbar {
+  position: absolute;   
+  right: 0;              
+  top: 0;                   
+  margin: 2rem;
+}
+#about {
+  margin-left: 1rem;
+  margin-top: 3rem;
 }
